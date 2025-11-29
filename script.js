@@ -33,6 +33,17 @@ function initVanta() {
 
 // Wait for DOM and scripts to load
 window.addEventListener('DOMContentLoaded', () => {
+    // Update current year in footer and year badge
+    const currentYear = new Date().getFullYear();
+    const footerYear = document.getElementById('footer-year');
+    const yearBadge = document.getElementById('year-badge');
+    if (footerYear) {
+        footerYear.textContent = currentYear;
+    }
+    if (yearBadge) {
+        yearBadge.textContent = currentYear;
+    }
+    
     // Initialize Vanta after a short delay to ensure Three.js is loaded
     setTimeout(initVanta, 100);
     
