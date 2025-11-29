@@ -71,47 +71,47 @@ function initAnimations() {
     gsap.set('.form-group input, .form-group textarea', { opacity: 0, y: 20 });
 
     // Hero Section Animations
-    const heroTimeline = gsap.timeline({ delay: 0.5 });
+    const heroTimeline = gsap.timeline({ delay: 0.2 });
     
     // Animate decorative elements
     heroTimeline
         .to('.hero-decorative-elements span', {
             opacity: 1,
             scale: 1,
-            duration: 0.6,
-            stagger: 0.1,
+            duration: 0.3,
+            stagger: 0.05,
             ease: 'back.out(1.7)'
         })
         // Animate title lines
         .to('.hero-title .title-line', {
             opacity: 1,
             y: 0,
-            duration: 1,
-            stagger: 0.2,
+            duration: 0.5,
+            stagger: 0.1,
             ease: 'power3.out'
-        }, '-=0.3')
+        }, '-=0.2')
         // Animate button
         .to('.btn-hero-yellow', {
             opacity: 1,
             scale: 1,
             rotation: 0,
-            duration: 0.8,
+            duration: 0.4,
             ease: 'back.out(1.7)'
-        }, '-=0.4')
+        }, '-=0.3')
         // Animate description box
         .to('.hero-description-box', {
             opacity: 1,
             x: 0,
-            duration: 1,
+            duration: 0.5,
             ease: 'power3.out'
-        }, '-=0.6')
+        }, '-=0.3')
         // Animate scroll indicator
         .to('.scroll-indicator-box', {
             opacity: 1,
             x: 0,
-            duration: 1,
+            duration: 0.5,
             ease: 'power3.out'
-        }, '-=0.8');
+        }, '-=0.4');
 
     // Navbar animation on scroll - iPhone-like glass effect
     gsap.to('.navbar', {
@@ -119,7 +119,8 @@ function initAnimations() {
             trigger: '.hero',
             start: 'top top',
             end: 'bottom top',
-            scrub: true
+            scrub: 0.5,
+            invalidateOnRefresh: true
         },
         top: '10px',
         borderRadius: '20px',
@@ -141,11 +142,11 @@ function initAnimations() {
         gsap.to(title, {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.5,
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: title,
-                start: 'top 80%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             }
         });
@@ -155,12 +156,12 @@ function initAnimations() {
     gsap.to('.about-text p', {
         opacity: 1,
         x: 0,
-        duration: 1,
-        stagger: 0.3,
+        duration: 0.5,
+        stagger: 0.15,
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.about',
-            start: 'top 70%',
+            start: 'top 85%',
             toggleActions: 'play none none none'
         }
     });
@@ -169,12 +170,12 @@ function initAnimations() {
     gsap.to('.stat-item', {
         opacity: 1,
         scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
+        duration: 0.4,
+        stagger: 0.1,
         ease: 'back.out(1.7)',
         scrollTrigger: {
             trigger: '.about-stats',
-            start: 'top 80%',
+            start: 'top 90%',
             toggleActions: 'play none none none'
         }
     });
@@ -186,11 +187,11 @@ function initAnimations() {
             const obj = { count: 0 };
             gsap.to(obj, {
                 count: target,
-                duration: 2,
+                duration: 1,
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: stat,
-                    start: 'top 80%',
+                    start: 'top 90%',
                     toggleActions: 'play none none none'
                 },
                 onUpdate: () => {
@@ -206,18 +207,18 @@ function initAnimations() {
             opacity: 1,
             y: 0,
             rotationX: 0,
-            duration: 1,
-            delay: index * 0.1,
+            duration: 0.5,
+            delay: index * 0.05,
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: card,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
             onEnter: () => {
                 gsap.to(card, {
                     scale: 1.05,
-                    duration: 0.3,
+                    duration: 0.2,
                     yoyo: true,
                     repeat: 1,
                     ease: 'power2.inOut'
@@ -232,12 +233,12 @@ function initAnimations() {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 1,
-            delay: index * 0.15,
+            duration: 0.5,
+            delay: index * 0.08,
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: card,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             }
         });
@@ -247,12 +248,12 @@ function initAnimations() {
     gsap.to('.contact-item', {
         opacity: 1,
         x: 0,
-        duration: 0.8,
-        stagger: 0.2,
+        duration: 0.4,
+        stagger: 0.1,
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.contact-info',
-            start: 'top 80%',
+            start: 'top 90%',
             toggleActions: 'play none none none'
         }
     });
@@ -260,11 +261,11 @@ function initAnimations() {
     gsap.to('.contact-form', {
         opacity: 1,
         x: 0,
-        duration: 1,
+        duration: 0.5,
         ease: 'power3.out',
         scrollTrigger: {
             trigger: '.contact-form',
-            start: 'top 80%',
+            start: 'top 90%',
             toggleActions: 'play none none none'
         }
     });
@@ -272,12 +273,12 @@ function initAnimations() {
     gsap.to('.form-group input, .form-group textarea', {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        stagger: 0.1,
+        duration: 0.3,
+        stagger: 0.05,
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.contact-form',
-            start: 'top 80%',
+            start: 'top 90%',
             toggleActions: 'play none none none'
         }
     });
@@ -286,11 +287,11 @@ function initAnimations() {
     gsap.to('.footer', {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.footer',
-            start: 'top 90%',
+            start: 'top 95%',
             toggleActions: 'play none none none'
         }
     });
@@ -305,13 +306,13 @@ document.querySelectorAll('.skill-card').forEach(card => {
             y: -15,
             scale: 1.05,
             boxShadow: '0 8px 24px rgba(88, 166, 255, 0.3)',
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
         gsap.to(card.querySelector('.skill-icon'), {
             scale: 1.2,
             rotation: 5,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'back.out(1.7)'
         });
     });
@@ -321,13 +322,13 @@ document.querySelectorAll('.skill-card').forEach(card => {
             y: 0,
             scale: 1,
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.12)',
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
         gsap.to(card.querySelector('.skill-icon'), {
             scale: 1,
             rotation: 0,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
     });
@@ -337,16 +338,18 @@ document.querySelectorAll('.skill-card').forEach(card => {
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
         gsap.to(card, {
-            y: -20,
+            y: -15,
             scale: 1.02,
             boxShadow: '0 8px 24px rgba(88, 166, 255, 0.4)',
-            duration: 0.4,
-            ease: 'power2.out'
+            duration: 0.43,
+            ease: 'power1.out',
+            force3D: true
         });
         gsap.to(card.querySelector('.project-image'), {
-            scale: 1.1,
-            duration: 0.4,
-            ease: 'power2.out'
+            scale: 1.05,
+            duration: 0.43,
+            ease: 'power1.out',
+            force3D: true
         });
     });
 
@@ -355,13 +358,15 @@ document.querySelectorAll('.project-card').forEach(card => {
             y: 0,
             scale: 1,
             boxShadow: '0 5px 20px rgba(0, 0, 0, 0.1)',
-            duration: 0.4,
-            ease: 'power2.out'
+            duration: 0.43,
+            ease: 'power1.out',
+            force3D: true
         });
         gsap.to(card.querySelector('.project-image'), {
             scale: 1,
-            duration: 0.4,
-            ease: 'power2.out'
+            duration: 0.43,
+            ease: 'power1.out',
+            force3D: true
         });
     });
 });
@@ -522,19 +527,50 @@ document.querySelectorAll('.project-link').forEach(link => {
     });
 });
 
+// Stat Items Hover Effect
+document.querySelectorAll('.stat-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        gsap.to(item, {
+            y: -10,
+            scale: 1.05,
+            duration: 0.75,
+            ease: 'power2.out'
+        });
+        gsap.to(item.querySelector('h3'), {
+            scale: 1.1,
+            duration: 0.75,
+            ease: 'back.out(1.7)'
+        });
+    });
+
+    item.addEventListener('mouseleave', () => {
+        gsap.to(item, {
+            y: 0,
+            scale: 1,
+            duration: 0.75,
+            ease: 'power2.out'
+        });
+        gsap.to(item.querySelector('h3'), {
+            scale: 1,
+            duration: 0.75,
+            ease: 'power2.out'
+        });
+    });
+});
+
 // Contact Items Hover
 document.querySelectorAll('.contact-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         gsap.to(item, {
             x: 10,
             scale: 1.05,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
         gsap.to(item.querySelector('.contact-icon'), {
             scale: 1.3,
             rotation: 10,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'back.out(1.7)'
         });
     });
@@ -543,13 +579,13 @@ document.querySelectorAll('.contact-item').forEach(item => {
         gsap.to(item, {
             x: 0,
             scale: 1,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
         gsap.to(item.querySelector('.contact-icon'), {
             scale: 1,
             rotation: 0,
-            duration: 0.3,
+            duration: 0.75,
             ease: 'power2.out'
         });
     });
@@ -635,12 +671,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 70;
-            // Animate scroll using GSAP (animating document.documentElement.scrollTop)
-            gsap.to(document.documentElement, {
-                scrollTop: offsetTop,
-                duration: 1.5,
-                ease: 'power2.inOut'
+            const offsetTop = target.offsetTop - 80;
+            // Use native smooth scroll for better performance
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
             });
         }
     });
@@ -654,7 +689,8 @@ gsap.to('.hero-content', {
         trigger: '.hero',
         start: 'top top',
         end: 'bottom top',
-        scrub: true
+        scrub: 1,
+        invalidateOnRefresh: true
     }
 });
 
@@ -666,7 +702,8 @@ gsap.to('.hero-decorative-elements span', {
         trigger: '.hero',
         start: 'top top',
         end: 'bottom top',
-        scrub: true
+        scrub: 1,
+        invalidateOnRefresh: true
     }
 });
 
