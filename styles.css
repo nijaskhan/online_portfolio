@@ -488,6 +488,7 @@ body {
     padding: 20px 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     justify-self: end;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -499,6 +500,8 @@ body {
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .scroll-indicator-box:hover {
@@ -512,7 +515,15 @@ body {
 }
 
 .arrow-down {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Animation moved to hover for animate on hover only */
+}
+
+.scroll-indicator-box:hover .arrow-down {
     animation: bounce-arrow 1.5s ease-in-out infinite;
 }
 
@@ -1031,17 +1042,30 @@ section {
 
 .social-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .social-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
 }
 
 .social-links a:hover {
     color: var(--accent-blue);
+    background: rgba(88, 166, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-links a i {
+    font-size: 1.2rem;
 }
 
 /* Animations */
