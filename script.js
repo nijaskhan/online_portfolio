@@ -573,31 +573,29 @@ document.querySelectorAll('.stat-item').forEach(item => {
 document.querySelectorAll('.contact-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         gsap.to(item, {
-            x: 10,
-            scale: 1.05,
-            duration: 0.75,
-            ease: 'power2.out'
+            y: -5,
+            scale: 1.02,
+            duration: 0.03,
+            ease: 'power1.out'
         });
         gsap.to(item.querySelector('.contact-icon'), {
-            scale: 1.3,
-            rotation: 10,
-            duration: 0.75,
-            ease: 'back.out(1.7)'
+            scale: 1.2,
+            duration: 0.03,
+            ease: 'power1.out'
         });
     });
 
     item.addEventListener('mouseleave', () => {
         gsap.to(item, {
-            x: 0,
+            y: 0,
             scale: 1,
-            duration: 0.75,
-            ease: 'power2.out'
+            duration: 0.03,
+            ease: 'power1.out'
         });
         gsap.to(item.querySelector('.contact-icon'), {
             scale: 1,
-            rotation: 0,
-            duration: 0.75,
-            ease: 'power2.out'
+            duration: 0.03,
+            ease: 'power1.out'
         });
     });
 });
