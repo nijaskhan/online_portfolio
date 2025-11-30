@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Nijas Khan</div>
+            <div class="nav-brand" style="cursor:pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Nijas Khan</div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -79,27 +79,49 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm Nijas Khan, a passionate software developer and freelancer dedicated to creating
-                        exceptional digital experiences. With a keen eye for detail and a love for clean,
-                        efficient code, I transform complex problems into elegant solutions.
+                        I'm Nijas Khan, a Full Stack Developer with expertise in web and mobile application development.
+                        Currently working at Parel Creative, I've contributed to 6+ full-stack projects using React.js,
+                        React-Native, Next.js, Node.js, Express.js, MongoDB, and AWS services.
                     </p>
                     <p>
-                        Whether working on web applications, mobile solutions, or custom software, I bring
-                        creativity and technical expertise to every project. My goal is to deliver high-quality
-                        work that exceeds expectations and drives success for my clients.
+                        I specialize in building scalable applications with modern technologies. My experience includes
+                        successfully migrating legacy systems to modern tech stacks, implementing automated database
+                        management solutions, and developing real-time applications. I'm passionate about creating
+                        efficient, maintainable code and delivering solutions that drive business success.
                     </p>
+                    <div class="work-experience">
+                        <div class="experience-item">
+                            <h3>Full Stack Developer</h3>
+                            <p class="company">Parel Creative | May 2023 - Present, Kochi, Kerala</p>
+                            <ul class="experience-list">
+                                <li>Contributed to 6+ full-stack web and mobile applications with a skilled team</li>
+                                <li>Successfully migrated Staragent from .NET to React.js and Node.js</li>
+                                <li>Implemented MongoDB to support multiple client-specific databases</li>
+                                <li>Proposed and implemented a system for documenting common bugs and mistakes</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Full Stack Developer Intern</h3>
+                            <p class="company">Brototype | Aug 2022 - May 2023, Kochi, Kerala</p>
+                            <ul class="experience-list">
+                                <li>Contributed to full stack web applications and websites</li>
+                                <li>Participated in coding challenges, securing 2nd place in overall Kerala</li>
+                                <li>Delivered speeches on web server vulnerabilities and security topics</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
+                            <h3>6+</h3>
+                            <p>Projects at Parel Creative</p>
                         </div>
                         <div class="stat-item">
-                            <h3>30+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>5+</h3>
+                            <h3>2+</h3>
                             <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>47</h3>
+                            <p>GitHub Repositories</p>
                         </div>
                     </div>
                 </div>
@@ -115,32 +137,34 @@
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
                     <h3>Frontend Development</h3>
-                    <p>React, Vue.js, HTML5, CSS3, JavaScript, TypeScript</p>
+                    <p>ReactJS, React-Native, NextJS, JavaScript, Redux, RTK Query, Bootstrap, Material UI, Chakra UI,
+                        Tailwind CSS, HTML, CSS, HBS, EJS, GSAP</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-server"></i></div>
                     <h3>Backend Development</h3>
-                    <p>Node.js, Python, PHP, Express, RESTful APIs</p>
+                    <p>NodeJS, ExpressJS, Python, RESTful APIs, AWS Lambda, Microservices</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Mobile Development</h3>
-                    <p>React Native, Flutter, iOS, Android</p>
+                    <p>React Native, Flutter, Dart, iOS, Android</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Database</h3>
-                    <p>MySQL, PostgreSQL, MongoDB, Firebase</p>
+                    <p>MongoDB, Mongoose, PostgreSQL, DynamoDB, Redis</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>AWS, Docker, Git, CI/CD, Linux</p>
+                    <h3>AWS & DevOps</h3>
+                    <p>AWS Lambda, S3, Route53, EBS, ECR, Amplify, EC2, SES, Docker, CI/CD, Git, GitHub, Bitbucket,
+                        Linux</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Design Tools</h3>
-                    <p>Figma, Adobe XD, UI/UX Design</p>
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Others</h3>
+                    <p>Axios, Ajax, Rtk Query, jQuery, Bash Scripting, DNS Administration, Python Automations</p>
                 </div>
             </div>
         </div>
@@ -153,61 +177,87 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">Project 1</div>
+                        <img src="assets/banners/staragent_banner.jpg" alt="STARAGENT - Agency Software">
                     </div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration, user authentication, and admin
-                            dashboard.</p>
+                        <h3>STARAGENT - Agency Software</h3>
+                        <p>A powerful platform for agencies to manage talents and workers efficiently. Successfully
+                            migrated from .NET to React.js and Node.js, significantly improving overall performance.
+                            Features automated multi-database management from a single, scalable codebase.</p>
                         <div class="project-tags">
-                            <span>React</span>
+                            <span>React.js</span>
+                            <span>Material UI</span>
+                            <span>RTK Query</span>
                             <span>Node.js</span>
+                            <span>Express.js</span>
                             <span>MongoDB</span>
+                            <span>Mongoose</span>
+                            <span>AWS</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="https://staragent.co/" class="project-link">View Project</a>
+                            <a href="#" class="project-link disabled" title="Source code is confidential"
+                                aria-disabled="true" tabindex="-1">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">Project 2</div>
+                        <img src="assets/banners/parke_banner.png" alt="PARKE - Parking Space Booking App">
                     </div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates and team collaboration
-                            features.</p>
-                        <div class="project-tags">
-                            <span>Vue.js</span>
-                            <span>Firebase</span>
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Project 3</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Mobile Banking App</h3>
-                        <p>A secure mobile banking application with biometric authentication and transaction management.
-                        </p>
+                        <h3>PARKE - Parking Space Booking App</h3>
+                        <p>A mobile app that enables users to book nearby parking spaces in real time, offering a smooth
+                            experience
+                            for both users and providers. Built to reduce waiting time and improve space utilization.
+                            Available on Android and iOS platforms with payment integration.</p>
                         <div class="project-tags">
                             <span>React Native</span>
+                            <span>RTK Query</span>
                             <span>Node.js</span>
-                            <span>PostgreSQL</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>AWS</span>
+                            <span>CI/CD</span>
+                            <span>Razorpay</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.zapdrive.parke" class="project-link">View Project</a>
+                            <a href="#" class="project-link disabled" title="Source code is confidential"
+                                aria-disabled="true" tabindex="-1">GitHub</a>
                         </div>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/banners/buktym_banner.jpg" alt="BUTYM - Salon Booking Web App">
+                    </div>
+                    <div class="project-content">
+                        <h3>BUTYM - Salon Booking Web App</h3>
+                        <p>A web application for managing and booking salons nearby. Users can discover local salons,
+                            view services,
+                            and book appointments seamlessly. Built with modern web technologies for a smooth booking
+                            experience.<br>
+                            Features admin and salon dashboards for staff and booking management.</p>
+                        <div class="project-tags">
+                            <span>NextJS</span>
+                            <span>Axios</span>
+                            <span>Bootstrap 5</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://buktym.com/" class="project-link">View Project</a>
+                            <a href="#" class="project-link disabled" title="Source code is confidential"
+                                aria-disabled="true" tabindex="-1">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-projects">
+                <a href="https://github.com/nijaskhan" target="_blank" rel="noopener noreferrer" class="btn-view-more">
+                    <i class="fab fa-github"></i>
+                    <span>Explore More Projects on GitHub</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>

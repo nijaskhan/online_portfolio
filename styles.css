@@ -609,6 +609,71 @@ section {
     text-align: center;
 }
 
+.work-experience {
+    margin: 3rem 0;
+    text-align: left;
+}
+
+.experience-item {
+    background: rgba(13, 17, 23, 0.6);
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-item:hover {
+    background: rgba(13, 17, 23, 0.75);
+    backdrop-filter: blur(50px) saturate(200%);
+    -webkit-backdrop-filter: blur(50px) saturate(200%);
+    box-shadow: 
+        0 12px 40px 0 rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .company {
+    color: var(--accent-orange);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
 .about-stats {
     display: flex;
     justify-content: space-around;
@@ -764,6 +829,18 @@ section {
     overflow: hidden;
     will-change: transform;
     transform: translateZ(0);
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
 }
 
 .project-placeholder {
@@ -818,6 +895,116 @@ section {
 
 .project-link:hover {
     color: var(--accent-purple);
+}
+
+.project-link.disabled {
+    color: var(--text-muted);
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    position: relative;
+}
+
+.project-link.disabled:hover {
+    color: var(--text-muted);
+}
+
+.view-more-projects {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+.btn-view-more {
+    background: rgba(13, 17, 23, 0.6);
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-view-more::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 0;
+}
+
+.btn-view-more::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(188, 140, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.btn-view-more:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.btn-view-more:hover::after {
+    opacity: 1;
+}
+
+.btn-view-more:hover {
+    background: rgba(13, 17, 23, 0.75);
+    backdrop-filter: blur(50px) saturate(200%);
+    -webkit-backdrop-filter: blur(50px) saturate(200%);
+    box-shadow: 
+        0 12px 40px 0 rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-view-more i,
+.btn-view-more span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-view-more i:first-child {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+}
+
+.btn-view-more i:last-child {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-view-more:hover i:last-child {
+    transform: translateX(5px);
 }
 
 /* Contact Section */
