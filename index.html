@@ -406,10 +406,12 @@
                         success: function(response) {
                             Toastify({
                                 text: "Form submitted successfully",
-                                duration: 2000,
-                                className: "info",
+                                duration: 3000,
+                                className: "toast-success",
                                 gravity: "top",
-                                position: "center"
+                                position: "center",
+                                close: true,
+                                stopOnFocus: true
                             }).showToast();
                             $("#submitForm").find("input[type='text'], input[type='email'], textarea").val("");
                             $('#showSendMessageLoadingBtn').removeClass('d-block').addClass('d-none');
@@ -448,10 +450,12 @@
                                 setTimeout(() => {
                                     Toastify({
                                         text: "Form submitted successfully",
-                                        duration: 2000,
-                                        className: "info",
+                                        duration: 3000,
+                                        className: "toast-success",
                                         gravity: "top",
-                                        position: "center"
+                                        position: "center",
+                                        close: true,
+                                        stopOnFocus: true
                                     }).showToast();
                                     $("#submitForm").find("input[type='text'], input[type='email'], textarea").val("");
                                     $('#showSendMessageLoadingBtn').removeClass('d-block').addClass('d-none');
@@ -464,10 +468,12 @@
                             } else {
                                 Toastify({
                                     text: "Form is not submitted, Try after some time",
-                                    duration: 3000,
-                                    className: "info",
+                                    duration: 4000,
+                                    className: "toast-error",
                                     gravity: "top",
-                                    position: "center"
+                                    position: "center",
+                                    close: true,
+                                    stopOnFocus: true
                                 }).showToast();
                                 $('#showSendMessageLoadingBtn').removeClass('d-block').addClass('d-none');
                                 $('#showSendMessageBtn').removeClass('d-none');
