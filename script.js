@@ -716,36 +716,9 @@ gsap.to('.hero-decorative-elements span', {
     }
 });
 
-// ========== FORM SUBMISSION ANIMATION ==========
-
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        
-        // Animate form submission
-        gsap.to('.contact-form', {
-            scale: 0.95,
-            opacity: 0.7,
-            duration: 0.3,
-            yoyo: true,
-            repeat: 1,
-            ease: 'power2.inOut',
-            onComplete: () => {
-                alert(`Thank you for your message, ${name}! I'll get back to you soon at ${email}.`);
-                contactForm.reset();
-                gsap.to('.contact-form', {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.3
-                });
-            }
-        });
-    });
-}
+// ========== FORM SUBMISSION HANDLED BY JQUERY VALIDATE ==========
+// Form submission is now handled by jQuery Validate and Google Apps Script
+// See the script tag at the end of index.html
 
 // ========== CURSOR FOLLOW EFFECT (Optional Enhancement) ==========
 

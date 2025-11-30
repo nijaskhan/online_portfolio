@@ -789,9 +789,9 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .project-card {
@@ -1236,6 +1236,40 @@ section {
     z-index: 1;
 }
 
+/* Utility Classes for Form */
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+#showSendMessageLoadingBtn {
+    display: none !important;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#showSendMessageLoadingBtn.d-block {
+    display: flex !important;
+}
+
+#showSendMessageLoadingBtn i {
+    animation: spin 1s linear infinite;
+}
+
+#showSendMessageBtn.d-none {
+    display: none !important;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .btn-primary:active {
     transform: translateY(0);
     box-shadow: 
@@ -1452,5 +1486,59 @@ section {
         width: 100%;
         max-width: 300px;
     }
+}
+
+/* ========== TOASTIFY GLASSMORPHISM STYLING ========== */
+.toastify {
+    background: rgba(13, 17, 23, 0.75) !important;
+    backdrop-filter: blur(40px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+        0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
+    border-radius: 24px !important;
+    padding: 16px 24px !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 500 !important;
+    min-height: auto !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.toastify:hover {
+    background: rgba(13, 17, 23, 0.85) !important;
+    backdrop-filter: blur(50px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(50px) saturate(200%) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 
+        0 12px 40px 0 rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+        0 16px 48px 0 rgba(0, 0, 0, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+.toastify::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.toastify:hover::before {
+    opacity: 1;
+}
+
+/* Remove default Toastify gradient background */
+.toastify.on {
+    background-image: none !important;
 }
 
